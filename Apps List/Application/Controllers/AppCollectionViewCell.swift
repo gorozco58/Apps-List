@@ -12,19 +12,22 @@ import AlamofireImage
 class AppCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var appImageView: UIImageView!
+    @IBOutlet weak var progressIndicatorView: CircularLoaderView!
     
     static let identifier = "AppCollectionViewCell"
     static let nibName = "AppCollectionViewCell"
     
     func loadImage(imageUrl: NSURL) {
         
-        appImageView.af_setImageWithURL(imageUrl, placeholderImage: nil, filter: nil, progress: { (bytesRead, totalBytesRead, totalExpectedBytesToRead) in
+        appImageView.af_setImageWithURL(imageUrl, placeholderImage: nil, filter: nil, progress: { [weak self] (bytesRead, totalBytesRead, totalExpectedBytesToRead) in
             
-            print("progress \(bytesRead / totalExpectedBytesToRead)")
+            dispatch_async(dispatch_get_main_queue(), {
+                self?.progressIndicatorView.progress = CGFloat(totalBytesRead) / CGFloat(totalExpectedBytesToRead)
+            })
+        }, progressQueue: dispatch_get_main_queue(), imageTransition: .None, runImageTransitionIfCached: true) { [weak self] (response) in
             
-            }, progressQueue: dispatch_get_main_queue(), imageTransition: .None, runImageTransitionIfCached: true) { [weak self] (response) in
-                
-                self?.appImageView.image = response.result.value
+            self?.progressIndicatorView.reveal()
+            self?.appImageView.image = response.result.value
         }
     }
 }
