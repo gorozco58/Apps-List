@@ -63,6 +63,9 @@ extension MainListViewController: UITableViewDelegate {
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        let category = categories[indexPath.row]
+        let appsVC = AppsViewController(category: category)
+        navigationController?.pushViewController(appsVC, animated: true)
     }
 }
 

@@ -59,7 +59,7 @@ class App {
             self.name = try nameJSON.valueForKey(InternalParameterKey.Label.rawValue) as String
             
             let imageJSON = try jsonDictionary.valueForKey(ParameterKey.Image.rawValue) as [[String : AnyObject]]
-            self.image = try Image(jsonDictionary: imageJSON.first!)
+            self.image = try Image(jsonDictionary: imageJSON.last!)
             
             let summaryJSON = try jsonDictionary.valueForKey(ParameterKey.Summary.rawValue) as [String : AnyObject]
             self.summary = try summaryJSON.valueForKey(InternalParameterKey.Label.rawValue) as String

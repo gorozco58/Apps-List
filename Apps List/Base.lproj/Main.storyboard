@@ -30,17 +30,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAc-I6-WQu">
-                                                    <rect key="frame" x="11" y="11" width="578" height="27"/>
+                                                    <rect key="frame" x="8" y="8" width="584" height="33"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="28"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="CAc-I6-WQu" secondAttribute="bottom" constant="3" id="FIu-rh-DRr"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="CAc-I6-WQu" secondAttribute="trailing" constant="3" id="cVB-Se-UXl"/>
-                                                <constraint firstItem="CAc-I6-WQu" firstAttribute="leading" secondItem="CRb-oq-zXz" secondAttribute="leadingMargin" constant="3" id="nvH-jD-QQd"/>
-                                                <constraint firstItem="CAc-I6-WQu" firstAttribute="top" secondItem="CRb-oq-zXz" secondAttribute="topMargin" constant="3" id="xN9-Dv-ODL"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="CAc-I6-WQu" secondAttribute="bottom" id="FIu-rh-DRr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="CAc-I6-WQu" secondAttribute="trailing" id="cVB-Se-UXl"/>
+                                                <constraint firstItem="CAc-I6-WQu" firstAttribute="leading" secondItem="CRb-oq-zXz" secondAttribute="leadingMargin" id="nvH-jD-QQd"/>
+                                                <constraint firstItem="CAc-I6-WQu" firstAttribute="top" secondItem="CRb-oq-zXz" secondAttribute="topMargin" id="xN9-Dv-ODL"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
