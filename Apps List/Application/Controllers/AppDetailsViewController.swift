@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class AppDetailsViewController: UIViewController {
 
@@ -68,5 +69,15 @@ class AppDetailsViewController: UIViewController {
 
     @IBAction func linkButtonPressed(sender: UIButton) {
     
+        if #available(iOS 9.0, *) {
+            let vc = SFSafariViewController(URL: app.link, entersReaderIfAvailable: true)
+            presentViewController(vc, animated: true, completion: nil)
+        } else {
+            UIApplication.sharedApplication().openURL(app.link)
+        }
+    }
+    
+    @IBAction func gobackButtonPressed(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
