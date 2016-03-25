@@ -10,7 +10,7 @@ import Foundation
 
 class Price {
     
-    var amount: Double
+    var amount: String
     var currency: String
     
     // MARK: - Enums and Structures
@@ -25,7 +25,7 @@ class Price {
         do {
             
             let priceJSON = try jsonDictionary.valueForKey(InternalParameterKey.Attributes.rawValue) as [String : AnyObject]
-            self.amount = try priceJSON.valueForKey(PriceKey.Amount.rawValue) as Double
+            self.amount = try priceJSON.valueForKey(PriceKey.Amount.rawValue) as String
             self.currency = try priceJSON.valueForKey(PriceKey.Currency.rawValue) as String
             
         } catch {

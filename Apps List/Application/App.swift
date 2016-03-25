@@ -8,11 +8,6 @@
 
 import Foundation
 
-enum InitializationError: ErrorType {
-
-    case MissingMandatoryParameters
-}
-
 enum InternalParameterKey : String {
     case Label = "label"
     case Attributes = "attributes"
@@ -51,6 +46,7 @@ class App {
         case ReleaseDate = "im:releaseDate"
     }
     
+    //MARK: - Initialization
     init (jsonDictionary: [String : AnyObject]) throws {
     
         do {
@@ -62,8 +58,8 @@ class App {
             let nameJSON = try jsonDictionary.valueForKey(ParameterKey.Name.rawValue) as [String : AnyObject]
             self.name = try nameJSON.valueForKey(InternalParameterKey.Label.rawValue) as String
             
-            let imageJSON = try jsonDictionary.valueForKey(ParameterKey.Image.rawValue) as [String : AnyObject]
-            self.image = try Image(jsonDictionary: imageJSON)
+            let imageJSON = try jsonDictionary.valueForKey(ParameterKey.Image.rawValue) as [[String : AnyObject]]
+            self.image = try Image(jsonDictionary: imageJSON.first!)
             
             let summaryJSON = try jsonDictionary.valueForKey(ParameterKey.Summary.rawValue) as [String : AnyObject]
             self.summary = try summaryJSON.valueForKey(InternalParameterKey.Label.rawValue) as String

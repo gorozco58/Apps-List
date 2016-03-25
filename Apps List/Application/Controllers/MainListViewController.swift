@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ListViewController: UIViewController {
+class MainListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Category.getAppsList { (categories) in
+        Category.getAppsList { (categories, error) in
             
         }
     }

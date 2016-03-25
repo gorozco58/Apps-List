@@ -14,6 +14,7 @@
 		81189FDB1CA4AAD6008EA258 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FDA1CA4AAD6008EA258 /* Image.swift */; };
 		81189FDD1CA4AB55008EA258 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FDC1CA4AB55008EA258 /* Price.swift */; };
 		81189FDF1CA4AFFE008EA258 /* DictionaryTypeCast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FDE1CA4AFFE008EA258 /* DictionaryTypeCast.swift */; };
+		81189FE11CA5D2F1008EA258 /* MainGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FE01CA5D2F1008EA258 /* MainGridViewController.swift */; };
 		81CD731A1CA4903A0050043D /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 81CD73191CA4903A0050043D /* Models */; };
 		81CD731E1CA49CAE0050043D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD731D1CA49CAE0050043D /* Category.swift */; };
 		88D4E01A1CA32C1300D2F8E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4E0191CA32C1300D2F8E5 /* AppDelegate.swift */; };
@@ -22,7 +23,7 @@
 		88D4E0241CA32C1300D2F8E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88D4E0221CA32C1300D2F8E5 /* LaunchScreen.storyboard */; };
 		88D4E02F1CA32C1300D2F8E5 /* Apps_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4E02E1CA32C1300D2F8E5 /* Apps_ListTests.swift */; };
 		88D4E03A1CA32C1300D2F8E5 /* Apps_ListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4E0391CA32C1300D2F8E5 /* Apps_ListUITests.swift */; };
-		88D4E04A1CA32F2E00D2F8E5 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4E0491CA32F2E00D2F8E5 /* ListViewController.swift */; };
+		88D4E04A1CA32F2E00D2F8E5 /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4E0491CA32F2E00D2F8E5 /* MainListViewController.swift */; };
 		88D4E04D1CA32FC900D2F8E5 /* MainiPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88D4E04B1CA32FC900D2F8E5 /* MainiPad.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		81189FDA1CA4AAD6008EA258 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		81189FDC1CA4AB55008EA258 /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		81189FDE1CA4AFFE008EA258 /* DictionaryTypeCast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryTypeCast.swift; sourceTree = "<group>"; };
+		81189FE01CA5D2F1008EA258 /* MainGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainGridViewController.swift; sourceTree = "<group>"; };
 		81CD73191CA4903A0050043D /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
 		81CD731D1CA49CAE0050043D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		88D4E0161CA32C1200D2F8E5 /* Apps List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apps List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +68,7 @@
 		88D4E0351CA32C1300D2F8E5 /* Apps ListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Apps ListUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88D4E0391CA32C1300D2F8E5 /* Apps_ListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apps_ListUITests.swift; sourceTree = "<group>"; };
 		88D4E03B1CA32C1300D2F8E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88D4E0491CA32F2E00D2F8E5 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		88D4E0491CA32F2E00D2F8E5 /* MainListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainListViewController.swift; sourceTree = "<group>"; };
 		88D4E04C1CA32FC900D2F8E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainiPad.storyboard; sourceTree = "<group>"; };
 		9EA6862B67D9B5061C68FD47 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,8 +164,8 @@
 		88D4E0471CA32ECC00D2F8E5 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				81CD731D1CA49CAE0050043D /* Category.swift */,
 				81189FD61CA4A109008EA258 /* AlamofireRouter.swift */,
+				81CD731D1CA49CAE0050043D /* Category.swift */,
 				81189FD81CA4AA96008EA258 /* App.swift */,
 				81189FDA1CA4AAD6008EA258 /* Image.swift */,
 				81189FDC1CA4AB55008EA258 /* Price.swift */,
@@ -178,7 +180,8 @@
 		88D4E0481CA32F1A00D2F8E5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				88D4E0491CA32F2E00D2F8E5 /* ListViewController.swift */,
+				88D4E0491CA32F2E00D2F8E5 /* MainListViewController.swift */,
+				81189FE01CA5D2F1008EA258 /* MainGridViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -377,11 +380,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88D4E04A1CA32F2E00D2F8E5 /* ListViewController.swift in Sources */,
+				88D4E04A1CA32F2E00D2F8E5 /* MainListViewController.swift in Sources */,
 				81189FDD1CA4AB55008EA258 /* Price.swift in Sources */,
 				81189FDB1CA4AAD6008EA258 /* Image.swift in Sources */,
 				81189FD71CA4A109008EA258 /* AlamofireRouter.swift in Sources */,
 				88D4E01A1CA32C1300D2F8E5 /* AppDelegate.swift in Sources */,
+				81189FE11CA5D2F1008EA258 /* MainGridViewController.swift in Sources */,
 				81189FD91CA4AA96008EA258 /* App.swift in Sources */,
 				81189FDF1CA4AFFE008EA258 /* DictionaryTypeCast.swift in Sources */,
 				81CD731E1CA49CAE0050043D /* Category.swift in Sources */,

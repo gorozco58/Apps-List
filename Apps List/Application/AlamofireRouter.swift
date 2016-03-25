@@ -9,6 +9,11 @@
 import Foundation
 import Alamofire
 
+enum InitializationError: ErrorType {
+    
+    case MissingMandatoryParameters
+}
+
 enum AlamofireRouter: URLRequestConvertible {
 
     static let baseURLString = "https://itunes.apple.com/"
