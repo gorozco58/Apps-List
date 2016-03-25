@@ -17,7 +17,6 @@ class Price {
     private enum PriceKey : String {
         case Amount = "amount"
         case Currency = "currency"
-        
     }
     
     init(jsonDictionary: [String : AnyObject]) throws {

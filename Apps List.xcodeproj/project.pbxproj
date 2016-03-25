@@ -15,6 +15,8 @@
 		81189FDD1CA4AB55008EA258 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FDC1CA4AB55008EA258 /* Price.swift */; };
 		81189FDF1CA4AFFE008EA258 /* DictionaryTypeCast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FDE1CA4AFFE008EA258 /* DictionaryTypeCast.swift */; };
 		81189FE11CA5D2F1008EA258 /* MainGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FE01CA5D2F1008EA258 /* MainGridViewController.swift */; };
+		81189FE31CA5D4F1008EA258 /* Main Cells in Resources */ = {isa = PBXBuildFile; fileRef = 81189FE21CA5D4F1008EA258 /* Main Cells */; };
+		81189FE51CA5D573008EA258 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FE41CA5D573008EA258 /* MainTableViewCell.swift */; };
 		81CD731A1CA4903A0050043D /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 81CD73191CA4903A0050043D /* Models */; };
 		81CD731E1CA49CAE0050043D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD731D1CA49CAE0050043D /* Category.swift */; };
 		88D4E01A1CA32C1300D2F8E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4E0191CA32C1300D2F8E5 /* AppDelegate.swift */; };
@@ -54,6 +56,8 @@
 		81189FDC1CA4AB55008EA258 /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		81189FDE1CA4AFFE008EA258 /* DictionaryTypeCast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryTypeCast.swift; sourceTree = "<group>"; };
 		81189FE01CA5D2F1008EA258 /* MainGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainGridViewController.swift; sourceTree = "<group>"; };
+		81189FE21CA5D4F1008EA258 /* Main Cells */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Main Cells"; sourceTree = "<group>"; };
+		81189FE41CA5D573008EA258 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		81CD73191CA4903A0050043D /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
 		81CD731D1CA49CAE0050043D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		88D4E0161CA32C1200D2F8E5 /* Apps List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apps List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +184,8 @@
 		88D4E0481CA32F1A00D2F8E5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				81189FE21CA5D4F1008EA258 /* Main Cells */,
+				81189FE41CA5D573008EA258 /* MainTableViewCell.swift */,
 				88D4E0491CA32F2E00D2F8E5 /* MainListViewController.swift */,
 				81189FE01CA5D2F1008EA258 /* MainGridViewController.swift */,
 			);
@@ -308,6 +314,7 @@
 				88D4E04D1CA32FC900D2F8E5 /* MainiPad.storyboard in Resources */,
 				88D4E0211CA32C1300D2F8E5 /* Assets.xcassets in Resources */,
 				88D4E01F1CA32C1300D2F8E5 /* Main.storyboard in Resources */,
+				81189FE31CA5D4F1008EA258 /* Main Cells in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +391,7 @@
 				81189FDD1CA4AB55008EA258 /* Price.swift in Sources */,
 				81189FDB1CA4AAD6008EA258 /* Image.swift in Sources */,
 				81189FD71CA4A109008EA258 /* AlamofireRouter.swift in Sources */,
+				81189FE51CA5D573008EA258 /* MainTableViewCell.swift in Sources */,
 				88D4E01A1CA32C1300D2F8E5 /* AppDelegate.swift in Sources */,
 				81189FE11CA5D2F1008EA258 /* MainGridViewController.swift in Sources */,
 				81189FD91CA4AA96008EA258 /* App.swift in Sources */,
