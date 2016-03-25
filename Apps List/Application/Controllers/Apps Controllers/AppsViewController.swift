@@ -77,5 +77,8 @@ extension AppsViewController: UICollectionViewDelegate {
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
+        let app = apps[indexPath.row]
+        let appDetailsVC = AppDetailsViewController(app: app)
+        presentViewController(appDetailsVC, animated: true, completion: nil)
     }
 }

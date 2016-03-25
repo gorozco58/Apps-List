@@ -12,6 +12,11 @@ class Price {
     
     var amount: String
     var currency: String
+    var priceString: String {
+        get {
+            return "\(amount) \(currency)"
+        }
+    }
     
     // MARK: - Enums and Structures
     private enum PriceKey : String {
