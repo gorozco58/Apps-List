@@ -12,6 +12,7 @@ class MainTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     
+    static let identifier = "MainTableViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()

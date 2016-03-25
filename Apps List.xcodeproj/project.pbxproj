@@ -8,17 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		323C5BAFA83E3541716FC4E9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338B543F34F02A89751D02EC /* Pods.framework */; };
-		81189FD51CA4A0A0008EA258 /* Utils in Resources */ = {isa = PBXBuildFile; fileRef = 81189FD41CA4A0A0008EA258 /* Utils */; };
-		81189FD71CA4A109008EA258 /* AlamofireRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FD61CA4A109008EA258 /* AlamofireRouter.swift */; };
-		81189FD91CA4AA96008EA258 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FD81CA4AA96008EA258 /* App.swift */; };
-		81189FDB1CA4AAD6008EA258 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FDA1CA4AAD6008EA258 /* Image.swift */; };
-		81189FDD1CA4AB55008EA258 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FDC1CA4AB55008EA258 /* Price.swift */; };
-		81189FDF1CA4AFFE008EA258 /* DictionaryTypeCast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FDE1CA4AFFE008EA258 /* DictionaryTypeCast.swift */; };
 		81189FE11CA5D2F1008EA258 /* MainGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FE01CA5D2F1008EA258 /* MainGridViewController.swift */; };
-		81189FE31CA5D4F1008EA258 /* Main Cells in Resources */ = {isa = PBXBuildFile; fileRef = 81189FE21CA5D4F1008EA258 /* Main Cells */; };
-		81189FE51CA5D573008EA258 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FE41CA5D573008EA258 /* MainTableViewCell.swift */; };
-		81CD731A1CA4903A0050043D /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 81CD73191CA4903A0050043D /* Models */; };
-		81CD731E1CA49CAE0050043D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD731D1CA49CAE0050043D /* Category.swift */; };
+		81189FE91CA5D83E008EA258 /* AlamofireRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FE71CA5D83E008EA258 /* AlamofireRouter.swift */; };
+		81189FEA1CA5D83E008EA258 /* DictionaryTypeCast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FE81CA5D83E008EA258 /* DictionaryTypeCast.swift */; };
+		81189FF01CA5D85F008EA258 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FEC1CA5D85F008EA258 /* App.swift */; };
+		81189FF11CA5D85F008EA258 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FED1CA5D85F008EA258 /* Category.swift */; };
+		81189FF21CA5D85F008EA258 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FEE1CA5D85F008EA258 /* Image.swift */; };
+		81189FF31CA5D85F008EA258 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FEF1CA5D85F008EA258 /* Price.swift */; };
+		81189FF61CA5D872008EA258 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FF51CA5D872008EA258 /* MainTableViewCell.swift */; };
 		88D4E01A1CA32C1300D2F8E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4E0191CA32C1300D2F8E5 /* AppDelegate.swift */; };
 		88D4E01F1CA32C1300D2F8E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88D4E01D1CA32C1300D2F8E5 /* Main.storyboard */; };
 		88D4E0211CA32C1300D2F8E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88D4E0201CA32C1300D2F8E5 /* Assets.xcassets */; };
@@ -49,17 +46,14 @@
 /* Begin PBXFileReference section */
 		338B543F34F02A89751D02EC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AED92E3CD78027828A2D815 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		81189FD41CA4A0A0008EA258 /* Utils */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Utils; sourceTree = "<group>"; };
-		81189FD61CA4A109008EA258 /* AlamofireRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireRouter.swift; sourceTree = "<group>"; };
-		81189FD81CA4AA96008EA258 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		81189FDA1CA4AAD6008EA258 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		81189FDC1CA4AB55008EA258 /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
-		81189FDE1CA4AFFE008EA258 /* DictionaryTypeCast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryTypeCast.swift; sourceTree = "<group>"; };
 		81189FE01CA5D2F1008EA258 /* MainGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainGridViewController.swift; sourceTree = "<group>"; };
-		81189FE21CA5D4F1008EA258 /* Main Cells */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Main Cells"; sourceTree = "<group>"; };
-		81189FE41CA5D573008EA258 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
-		81CD73191CA4903A0050043D /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
-		81CD731D1CA49CAE0050043D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		81189FE71CA5D83E008EA258 /* AlamofireRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlamofireRouter.swift; path = Utils/AlamofireRouter.swift; sourceTree = "<group>"; };
+		81189FE81CA5D83E008EA258 /* DictionaryTypeCast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionaryTypeCast.swift; path = Utils/DictionaryTypeCast.swift; sourceTree = "<group>"; };
+		81189FEC1CA5D85F008EA258 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = App.swift; path = Models/App.swift; sourceTree = "<group>"; };
+		81189FED1CA5D85F008EA258 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Category.swift; path = Models/Category.swift; sourceTree = "<group>"; };
+		81189FEE1CA5D85F008EA258 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Models/Image.swift; sourceTree = "<group>"; };
+		81189FEF1CA5D85F008EA258 /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Price.swift; path = Models/Price.swift; sourceTree = "<group>"; };
+		81189FF51CA5D872008EA258 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableViewCell.swift; path = Cells/MainTableViewCell.swift; sourceTree = "<group>"; };
 		88D4E0161CA32C1200D2F8E5 /* Apps List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apps List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88D4E0191CA32C1300D2F8E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88D4E01E1CA32C1300D2F8E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +103,34 @@
 				338B543F34F02A89751D02EC /* Pods.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81189FE61CA5D832008EA258 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				81189FE71CA5D83E008EA258 /* AlamofireRouter.swift */,
+				81189FE81CA5D83E008EA258 /* DictionaryTypeCast.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		81189FEB1CA5D84A008EA258 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				81189FEC1CA5D85F008EA258 /* App.swift */,
+				81189FED1CA5D85F008EA258 /* Category.swift */,
+				81189FEE1CA5D85F008EA258 /* Image.swift */,
+				81189FEF1CA5D85F008EA258 /* Price.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		81189FF41CA5D867008EA258 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				81189FF51CA5D872008EA258 /* MainTableViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		88D4E00D1CA32C1200D2F8E5 = {
@@ -168,14 +190,8 @@
 		88D4E0471CA32ECC00D2F8E5 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				81189FD61CA4A109008EA258 /* AlamofireRouter.swift */,
-				81CD731D1CA49CAE0050043D /* Category.swift */,
-				81189FD81CA4AA96008EA258 /* App.swift */,
-				81189FDA1CA4AAD6008EA258 /* Image.swift */,
-				81189FDC1CA4AB55008EA258 /* Price.swift */,
-				81189FDE1CA4AFFE008EA258 /* DictionaryTypeCast.swift */,
-				81189FD41CA4A0A0008EA258 /* Utils */,
-				81CD73191CA4903A0050043D /* Models */,
+				81189FE61CA5D832008EA258 /* Utils */,
+				81189FEB1CA5D84A008EA258 /* Models */,
 				88D4E0481CA32F1A00D2F8E5 /* Controllers */,
 			);
 			path = Application;
@@ -184,8 +200,7 @@
 		88D4E0481CA32F1A00D2F8E5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				81189FE21CA5D4F1008EA258 /* Main Cells */,
-				81189FE41CA5D573008EA258 /* MainTableViewCell.swift */,
+				81189FF41CA5D867008EA258 /* Cells */,
 				88D4E0491CA32F2E00D2F8E5 /* MainListViewController.swift */,
 				81189FE01CA5D2F1008EA258 /* MainGridViewController.swift */,
 			);
@@ -308,13 +323,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81189FD51CA4A0A0008EA258 /* Utils in Resources */,
-				81CD731A1CA4903A0050043D /* Models in Resources */,
 				88D4E0241CA32C1300D2F8E5 /* LaunchScreen.storyboard in Resources */,
 				88D4E04D1CA32FC900D2F8E5 /* MainiPad.storyboard in Resources */,
 				88D4E0211CA32C1300D2F8E5 /* Assets.xcassets in Resources */,
 				88D4E01F1CA32C1300D2F8E5 /* Main.storyboard in Resources */,
-				81189FE31CA5D4F1008EA258 /* Main Cells in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,15 +400,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				88D4E04A1CA32F2E00D2F8E5 /* MainListViewController.swift in Sources */,
-				81189FDD1CA4AB55008EA258 /* Price.swift in Sources */,
-				81189FDB1CA4AAD6008EA258 /* Image.swift in Sources */,
-				81189FD71CA4A109008EA258 /* AlamofireRouter.swift in Sources */,
-				81189FE51CA5D573008EA258 /* MainTableViewCell.swift in Sources */,
+				81189FF21CA5D85F008EA258 /* Image.swift in Sources */,
+				81189FE91CA5D83E008EA258 /* AlamofireRouter.swift in Sources */,
 				88D4E01A1CA32C1300D2F8E5 /* AppDelegate.swift in Sources */,
+				81189FF61CA5D872008EA258 /* MainTableViewCell.swift in Sources */,
+				81189FF01CA5D85F008EA258 /* App.swift in Sources */,
+				81189FF31CA5D85F008EA258 /* Price.swift in Sources */,
+				81189FEA1CA5D83E008EA258 /* DictionaryTypeCast.swift in Sources */,
 				81189FE11CA5D2F1008EA258 /* MainGridViewController.swift in Sources */,
-				81189FD91CA4AA96008EA258 /* App.swift in Sources */,
-				81189FDF1CA4AFFE008EA258 /* DictionaryTypeCast.swift in Sources */,
-				81CD731E1CA49CAE0050043D /* Category.swift in Sources */,
+				81189FF11CA5D85F008EA258 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
