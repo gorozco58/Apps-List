@@ -82,12 +82,6 @@ class CircularLoaderView: UIView {
         let fromPath = circlePathLayer.path
         let fromLineWidth = circlePathLayer.lineWidth
         
-        CATransaction.begin()
-        CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
-        circlePathLayer.lineWidth = 2 * finalRadius
-        circlePathLayer.path = toPath
-        CATransaction.commit()
-        
         let lineWidthAnimation = CABasicAnimation(keyPath: "lineWidth")
         lineWidthAnimation.fromValue = fromLineWidth
         lineWidthAnimation.toValue = 2 * finalRadius
@@ -101,6 +95,8 @@ class CircularLoaderView: UIView {
         groupAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         groupAnimation.animations = [pathAnimation, lineWidthAnimation]
         groupAnimation.delegate = self
+        groupAnimation.fillMode = kCAFillModeForwards
+        groupAnimation.removedOnCompletion = false
         circlePathLayer.addAnimation(groupAnimation, forKey: "strokeWidth")
     }
     

@@ -18,11 +18,12 @@
 		81189FF61CA5D872008EA258 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FF51CA5D872008EA258 /* MainTableViewCell.swift */; };
 		81189FFE1CA5E183008EA258 /* AppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81189FFC1CA5E183008EA258 /* AppsViewController.swift */; };
 		81189FFF1CA5E183008EA258 /* AppsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81189FFD1CA5E183008EA258 /* AppsViewController.xib */; };
-		8118A0031CA5E217008EA258 /* AppCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8118A0011CA5E217008EA258 /* AppCollectionViewCell.swift */; };
-		8118A0041CA5E217008EA258 /* AppCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8118A0021CA5E217008EA258 /* AppCollectionViewCell.xib */; };
 		8118A0061CA5EC7B008EA258 /* CircularLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8118A0051CA5EC7B008EA258 /* CircularLoaderView.swift */; };
-		8118A00C1CA5F1D3008EA258 /* AppDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8118A00A1CA5F1D3008EA258 /* AppDetailsViewController.swift */; };
-		8118A00D1CA5F1D3008EA258 /* AppDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8118A00B1CA5F1D3008EA258 /* AppDetailsViewController.xib */; };
+		8118A00F1CA6CF3A008EA258 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8118A00E1CA6CF3A008EA258 /* MainCollectionViewCell.swift */; };
+		8118A0121CA6CF94008EA258 /* AppCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8118A0101CA6CF94008EA258 /* AppCollectionViewCell.swift */; };
+		8118A0131CA6CF94008EA258 /* AppCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8118A0111CA6CF94008EA258 /* AppCollectionViewCell.xib */; };
+		8118A0161CA6CFA1008EA258 /* AppDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8118A0141CA6CFA1008EA258 /* AppDetailsViewController.swift */; };
+		8118A0171CA6CFA1008EA258 /* AppDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8118A0151CA6CFA1008EA258 /* AppDetailsViewController.xib */; };
 		88D4E01A1CA32C1300D2F8E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4E0191CA32C1300D2F8E5 /* AppDelegate.swift */; };
 		88D4E01F1CA32C1300D2F8E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88D4E01D1CA32C1300D2F8E5 /* Main.storyboard */; };
 		88D4E0211CA32C1300D2F8E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88D4E0201CA32C1300D2F8E5 /* Assets.xcassets */; };
@@ -63,11 +64,12 @@
 		81189FF51CA5D872008EA258 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableViewCell.swift; path = Cells/MainTableViewCell.swift; sourceTree = "<group>"; };
 		81189FFC1CA5E183008EA258 /* AppsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppsViewController.swift; path = "Apps Controllers/AppsViewController.swift"; sourceTree = "<group>"; };
 		81189FFD1CA5E183008EA258 /* AppsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AppsViewController.xib; path = "Apps Controllers/AppsViewController.xib"; sourceTree = "<group>"; };
-		8118A0011CA5E217008EA258 /* AppCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCollectionViewCell.swift; sourceTree = "<group>"; };
-		8118A0021CA5E217008EA258 /* AppCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppCollectionViewCell.xib; sourceTree = "<group>"; };
 		8118A0051CA5EC7B008EA258 /* CircularLoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularLoaderView.swift; path = Utils/CircularLoaderView.swift; sourceTree = "<group>"; };
-		8118A00A1CA5F1D3008EA258 /* AppDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailsViewController.swift; sourceTree = "<group>"; };
-		8118A00B1CA5F1D3008EA258 /* AppDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppDetailsViewController.xib; sourceTree = "<group>"; };
+		8118A00E1CA6CF3A008EA258 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainCollectionViewCell.swift; path = Cells/MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		8118A0101CA6CF94008EA258 /* AppCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppCollectionViewCell.swift; path = "Apps Controllers/Cells/AppCollectionViewCell.swift"; sourceTree = "<group>"; };
+		8118A0111CA6CF94008EA258 /* AppCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AppCollectionViewCell.xib; path = "Apps Controllers/Cells/AppCollectionViewCell.xib"; sourceTree = "<group>"; };
+		8118A0141CA6CFA1008EA258 /* AppDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDetailsViewController.swift; path = "Apps Controllers/App Details Controller/AppDetailsViewController.swift"; sourceTree = "<group>"; };
+		8118A0151CA6CFA1008EA258 /* AppDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AppDetailsViewController.xib; path = "Apps Controllers/App Details Controller/AppDetailsViewController.xib"; sourceTree = "<group>"; };
 		88D4E0161CA32C1200D2F8E5 /* Apps List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apps List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88D4E0191CA32C1300D2F8E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88D4E01E1CA32C1300D2F8E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				81189FF51CA5D872008EA258 /* MainTableViewCell.swift */,
+				8118A00E1CA6CF3A008EA258 /* MainCollectionViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -162,8 +165,8 @@
 		8118A0001CA5E1F8008EA258 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				8118A0011CA5E217008EA258 /* AppCollectionViewCell.swift */,
-				8118A0021CA5E217008EA258 /* AppCollectionViewCell.xib */,
+				8118A0101CA6CF94008EA258 /* AppCollectionViewCell.swift */,
+				8118A0111CA6CF94008EA258 /* AppCollectionViewCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -171,8 +174,8 @@
 		8118A0091CA5F1B3008EA258 /* App Details Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8118A00A1CA5F1D3008EA258 /* AppDetailsViewController.swift */,
-				8118A00B1CA5F1D3008EA258 /* AppDetailsViewController.xib */,
+				8118A0141CA6CFA1008EA258 /* AppDetailsViewController.swift */,
+				8118A0151CA6CFA1008EA258 /* AppDetailsViewController.xib */,
 			);
 			name = "App Details Controller";
 			sourceTree = "<group>";
@@ -372,9 +375,9 @@
 				88D4E04D1CA32FC900D2F8E5 /* MainiPad.storyboard in Resources */,
 				81189FFF1CA5E183008EA258 /* AppsViewController.xib in Resources */,
 				88D4E0211CA32C1300D2F8E5 /* Assets.xcassets in Resources */,
-				8118A0041CA5E217008EA258 /* AppCollectionViewCell.xib in Resources */,
 				88D4E01F1CA32C1300D2F8E5 /* Main.storyboard in Resources */,
-				8118A00D1CA5F1D3008EA258 /* AppDetailsViewController.xib in Resources */,
+				8118A0131CA6CF94008EA258 /* AppCollectionViewCell.xib in Resources */,
+				8118A0171CA6CFA1008EA258 /* AppDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,18 +452,19 @@
 			files = (
 				88D4E04A1CA32F2E00D2F8E5 /* MainListViewController.swift in Sources */,
 				81189FF21CA5D85F008EA258 /* Image.swift in Sources */,
-				8118A0031CA5E217008EA258 /* AppCollectionViewCell.swift in Sources */,
 				81189FE91CA5D83E008EA258 /* AlamofireRouter.swift in Sources */,
 				88D4E01A1CA32C1300D2F8E5 /* AppDelegate.swift in Sources */,
-				8118A00C1CA5F1D3008EA258 /* AppDetailsViewController.swift in Sources */,
 				81189FF61CA5D872008EA258 /* MainTableViewCell.swift in Sources */,
+				8118A00F1CA6CF3A008EA258 /* MainCollectionViewCell.swift in Sources */,
 				8118A0061CA5EC7B008EA258 /* CircularLoaderView.swift in Sources */,
 				81189FFE1CA5E183008EA258 /* AppsViewController.swift in Sources */,
+				8118A0161CA6CFA1008EA258 /* AppDetailsViewController.swift in Sources */,
 				81189FF01CA5D85F008EA258 /* App.swift in Sources */,
 				81189FF31CA5D85F008EA258 /* Price.swift in Sources */,
 				81189FEA1CA5D83E008EA258 /* DictionaryTypeCast.swift in Sources */,
 				81189FE11CA5D2F1008EA258 /* MainGridViewController.swift in Sources */,
 				81189FF11CA5D85F008EA258 /* Category.swift in Sources */,
+				8118A0121CA6CF94008EA258 /* AppCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +616,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = "Apps List/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -627,6 +632,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Apps List/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Test.AppsList.Apps-List";
