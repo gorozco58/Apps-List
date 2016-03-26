@@ -2,16 +2,19 @@ PODS:
   - Alamofire (3.3.0)
   - AlamofireImage (2.4.0):
     - Alamofire (~> 3.3)
+  - FSQCollectionViewAlignedLayout (1.1.1)
   - SVProgressHUD (2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
   - AlamofireImage (~> 2.0)
+  - FSQCollectionViewAlignedLayout (~> 1.1)
   - SVProgressHUD (~> 2.0)
 
 SPEC CHECKSUMS:
   Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
   AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
+  FSQCollectionViewAlignedLayout: 122006b230bf5635ae159f1ad1eaa9b5ef11391e
   SVProgressHUD: e9e7c893686a20da55a28015ed384d9425e15479
 
 COCOAPODS: 0.39.0

@@ -10,4 +10,13 @@ import UIKit
 
 class MainCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    static let identifier = "MainCollectionViewCell"
+    static let nibName = "MainCollectionViewCell"
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
 }
