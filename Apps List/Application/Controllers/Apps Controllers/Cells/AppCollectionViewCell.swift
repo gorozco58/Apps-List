@@ -17,6 +17,7 @@ class AppCollectionViewCell: UICollectionViewCell {
     static let identifier = "AppCollectionViewCell"
     static let nibName = "AppCollectionViewCell"
     
+    //MARK: Utils
     func loadImage(imageUrl: NSURL) {
         
         appImageView.af_setImageWithURL(imageUrl, placeholderImage: nil, filter: nil, progress: { [weak self] (bytesRead, totalBytesRead, totalExpectedBytesToRead) in

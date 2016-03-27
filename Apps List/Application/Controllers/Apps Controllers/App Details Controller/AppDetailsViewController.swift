@@ -11,19 +11,20 @@ import SafariServices
 
 class AppDetailsViewController: UIViewController {
 
-    @IBOutlet weak var backgroundImageView: UIImageView!
-    @IBOutlet weak var appImageView: UIImageView!
-    @IBOutlet weak var appNameLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var rightsLabel: UILabel!
-    @IBOutlet weak var artistLabel: UILabel!
-    @IBOutlet weak var contentTypeLabel: UILabel!
-    @IBOutlet weak var releaseDateLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var linkButton: UIButton!
+    @IBOutlet private weak var backgroundImageView: UIImageView!
+    @IBOutlet private weak var appImageView: UIImageView!
+    @IBOutlet private weak var appNameLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var rightsLabel: UILabel!
+    @IBOutlet private weak var artistLabel: UILabel!
+    @IBOutlet private weak var contentTypeLabel: UILabel!
+    @IBOutlet private weak var releaseDateLabel: UILabel!
+    @IBOutlet private weak var priceLabel: UILabel!
+    @IBOutlet private weak var linkButton: UIButton!
     
     private var app: App
     
+    //MARK: Initializers
     init(app: App) {
         self.app = app
         super.init(nibName: nil, bundle: nil)
@@ -33,6 +34,7 @@ class AppDetailsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -44,6 +46,7 @@ class AppDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: - Utils
     func setupAppInformation() {
         
         let blurEffect = UIBlurEffect(style: .Light)
@@ -67,6 +70,7 @@ class AppDetailsViewController: UIViewController {
         linkButton.setTitle(app.link.absoluteString, forState: .Normal)
     }
 
+    //MARK: - Actions
     @IBAction func linkButtonPressed(sender: UIButton) {
     
         if #available(iOS 9.0, *) {

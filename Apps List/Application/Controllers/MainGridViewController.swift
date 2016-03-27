@@ -10,12 +10,13 @@ import UIKit
 import FSQCollectionViewAlignedLayout
 import SVProgressHUD
 
-class MainGridViewController: UIViewController {
+class MainGridViewController: UIViewController, CategoryContent {
 
-    @IBOutlet weak var categoriesCollectionView: UICollectionView!
+    @IBOutlet private weak var categoriesCollectionView: UICollectionView!
     
-    private var categories: [Category] = []
+    internal var categories: [Category] = []
     
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +44,7 @@ class MainGridViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: - UTils
     func setupCollectionView() {
         
         let centerLayout = FSQCollectionViewAlignedLayout()
@@ -58,6 +60,7 @@ class MainGridViewController: UIViewController {
     }
 }
 
+//MARK: - UICollectionViewDataSource Extension
 extension MainGridViewController: UICollectionViewDataSource {
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -75,6 +78,7 @@ extension MainGridViewController: UICollectionViewDataSource {
     }
 }
 
+//MARK: - UICollectionViewDelegate Extension
 extension MainGridViewController: UICollectionViewDelegate {
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
@@ -85,6 +89,7 @@ extension MainGridViewController: UICollectionViewDelegate {
     }
 }
 
+//MARK: - FSQCollectionViewDelegateAlignedLayout Extension
 extension MainGridViewController: FSQCollectionViewDelegateAlignedLayout {
 
     func collectionView(collectionView: UICollectionView!, layout collectionViewLayout: FSQCollectionViewAlignedLayout!, sizeForItemAtIndexPath indexPath: NSIndexPath!, remainingLineSpace: CGFloat) -> CGSize {

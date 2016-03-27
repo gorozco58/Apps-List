@@ -10,11 +10,12 @@ import UIKit
 
 class AppsViewController: UIViewController {
 
-    @IBOutlet weak var appsCollectionView: UICollectionView!
+    @IBOutlet private weak var appsCollectionView: UICollectionView!
     
     private var category: Category
     private var apps: [App]
     
+    //MARK: - Initializers
     init(category: Category) {
         
         self.category = category
@@ -27,6 +28,7 @@ class AppsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -39,6 +41,7 @@ class AppsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: - Utils
     func setupCollectionView() {
         
         let layout = UICollectionViewFlowLayout()
@@ -55,6 +58,7 @@ class AppsViewController: UIViewController {
     }
 }
 
+//MARK: - UICollectionViewDataSource Extension
 extension AppsViewController: UICollectionViewDataSource {
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -73,6 +77,7 @@ extension AppsViewController: UICollectionViewDataSource {
     }
 }
 
+//MARK: - UICollectionViewDelegate Extension
 extension AppsViewController: UICollectionViewDelegate {
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {

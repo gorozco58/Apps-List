@@ -9,12 +9,18 @@
 import UIKit
 import SVProgressHUD
 
-class MainListViewController: UIViewController {
+protocol CategoryContent {
+    
+    var categories: [Category] { get }
+}
 
-    @IBOutlet weak var categoriesTableView: UITableView!
+class MainListViewController: UIViewController, CategoryContent {
+
+    @IBOutlet private weak var categoriesTableView: UITableView!
     
-    private var categories: [Category] = []
+    internal var categories: [Category] = []
     
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +47,7 @@ class MainListViewController: UIViewController {
     }
 }
 
+//MARK: - UITableViewDataSource Extension
 extension MainListViewController: UITableViewDataSource {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,6 +66,7 @@ extension MainListViewController: UITableViewDataSource {
     }
 }
 
+//MARK: - UITableViewDelegate Extension
 extension MainListViewController: UITableViewDelegate {
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
