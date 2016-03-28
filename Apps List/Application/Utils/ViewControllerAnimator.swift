@@ -62,7 +62,7 @@ class ViewControllerDismissAnimator: NSObject, UIViewControllerAnimatedTransitio
             })
         })
         
-        fromView.addCornerRadiusAnimation(0, to: 100, duration: 0.005)
+        fromView.addCornerRadiusAnimation(0, to: 100, duration: transitionTime() / 100)
         
         CATransaction.commit()
     }

@@ -26,11 +26,11 @@ class AppCollectionViewCell: UICollectionViewCell {
             
         }, progressQueue: dispatch_get_main_queue(), imageTransition: .None, runImageTransitionIfCached: true) { [weak self] (response) in
             
-            dispatch_async(dispatch_get_main_queue(), { 
-                self?.progressIndicatorView.reveal()
+            dispatch_async(dispatch_get_main_queue(), {
                 if let image = response.result.value {
                     self?.appImageView.image = image
                 }
+                self?.progressIndicatorView.reveal()
             })
         }
     }

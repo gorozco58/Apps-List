@@ -33,7 +33,7 @@ enum AlamofireRouter: URLRequestConvertible {
     var path: String {
         switch self {
         case .Categories:
-            return "us/rss/topfreeapplications/limit=200/json"
+            return "us/rss/topfreeapplications/limit=150/json"
         }
     }
         
