@@ -55,7 +55,7 @@ class ViewControllerDismissAnimator: NSObject, UIViewControllerAnimatedTransitio
         CATransaction.begin()
         CATransaction.setCompletionBlock({ 
           
-            UIView.animateWithDuration(transitionTime(), animations: {
+            UIView.animateWithDuration(transitionTime() / 1.5, animations: {
                 fromView.transform = CGAffineTransformMakeScale(0.01, 0.01)
                 }, completion: { _ in
                     transitionContext.completeTransition(true)
