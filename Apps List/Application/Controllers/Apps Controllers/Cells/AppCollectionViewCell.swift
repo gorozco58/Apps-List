@@ -20,7 +20,7 @@ class AppCollectionViewCell: UICollectionViewCell {
     //MARK: Utils
     func loadImage(imageUrl: NSURL) {
         
-        appImageView.af_setImageWithURL(imageUrl, placeholderImage: nil, filter: nil, progress: { [weak self] (bytesRead, totalBytesRead, totalExpectedBytesToRead) in
+        appImageView.af_setImageWithURL(imageUrl, placeholderImage: UIImage(named: "placeholder-app.png"), filter: nil, progress: { [weak self] (bytesRead, totalBytesRead, totalExpectedBytesToRead) in
             
             self?.progressIndicatorView.progress = CGFloat(totalBytesRead) / CGFloat(totalExpectedBytesToRead)
             
@@ -28,7 +28,9 @@ class AppCollectionViewCell: UICollectionViewCell {
             
             dispatch_async(dispatch_get_main_queue(), { 
                 self?.progressIndicatorView.reveal()
-                self?.appImageView.image = response.result.value
+                if let image = response.result.value {
+                    self?.appImageView.image = image
+                }
             })
         }
     }

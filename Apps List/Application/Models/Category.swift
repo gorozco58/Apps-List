@@ -9,6 +9,8 @@
 import Foundation
 import Alamofire
 
+private let CategoriesPath = "categories.obj"
+
 class Category: NSObject, NSCoding {
 
     //MARK: - Properties
@@ -88,7 +90,9 @@ class Category: NSObject, NSCoding {
                 }
             case .Failure(let error):
                 
-                completion(categories: nil, error: error)
+                //load categories from disk if exist
+                let categories = Category.loadCategoriesFromDisk()
+                completion(categories: categories, error: error)
             }
         }
     }
@@ -119,6 +123,43 @@ class Category: NSObject, NSCoding {
             }
         }
         
+        //save categories to disk
+        saveCategoriesToDisk(categories)
+        
         return categories
+    }
+}
+
+extension Category {
+
+    private class func saveCategoriesToDisk(categories: [Category]) -> Bool {
+        
+        let urlPath = Category.categoriesPath()
+        let dataToSave = NSKeyedArchiver.archivedDataWithRootObject(categories)
+        let success = dataToSave.writeToURL(urlPath, atomically: true)
+        
+        return success
+    }
+    
+    private class func loadCategoriesFromDisk() -> [Category]? {
+        
+        let urlPath = Category.categoriesPath()
+        var categories: [Category]?
+        
+        if let data = NSData(contentsOfURL: urlPath) {
+            
+            categories = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [Category]
+        }
+        
+        return categories
+    }
+    
+    private class func categoriesPath() -> NSURL {
+    
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let documentsDict = NSURL(fileURLWithPath: paths.first!)
+        let urlPath = documentsDict.URLByAppendingPathComponent(CategoriesPath)
+    
+        return urlPath
     }
 }

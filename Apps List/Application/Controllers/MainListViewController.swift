@@ -28,15 +28,15 @@ class MainListViewController: UIViewController, CategoryContent {
         
         Category.getAppsList { [unowned self] (categories, error) in
             
-            if let error = error {
-                
-                SVProgressHUD.showErrorWithStatus(error.localizedDescription)
-                
-            } else if let categories = categories {
+            if let categories = categories {
             
                 SVProgressHUD.dismiss()
                 self.categories = categories
                 self.categoriesTableView.reloadData()
+                
+            } else if let error = error {
+                
+                SVProgressHUD.showErrorWithStatus(error.localizedDescription)
             }
         }
     }

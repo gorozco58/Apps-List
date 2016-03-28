@@ -60,6 +60,6 @@ class Price: NSObject, NSCoding {
     func encodeWithCoder(aCoder: NSCoder) {
         
         aCoder.encodeObject(amount, forKey: EncodingKey.PriceAmount.rawValue)
-        aCoder.encodeObject(currency, forKey: EncodingKey.PriceAmount.rawValue)
+        aCoder.encodeObject(currency, forKey: EncodingKey.PriceCurrency.rawValue)
     }
 }
