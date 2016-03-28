@@ -28,6 +28,7 @@ class AppDetailsViewController: UIViewController {
     init(app: App) {
         self.app = app
         super.init(nibName: nil, bundle: nil)
+        self.transitioningDelegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -83,5 +84,18 @@ class AppDetailsViewController: UIViewController {
     
     @IBAction func gobackButtonPressed(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+}
+
+extension AppDetailsViewController: UIViewControllerTransitioningDelegate {
+
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        return ViewControllerPresentAnimator()
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        return ViewControllerDismissAnimator()
     }
 }
