@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Price {
+class Price: NSObject, NSCoding {
     
     var amount: String
     var currency: String
@@ -24,10 +24,21 @@ class Price {
         case Currency = "currency"
     }
     
-    init(jsonDictionary: [String : AnyObject]) throws {
+    private enum EncodingKey: String {
+        case PriceAmount = "PriceAmount"
+        case PriceCurrency = "PriceCurrency"
+    }
+    
+    //MARK: - Initialization
+    init(amount: String = "", currency: String = "") {
+        self.amount = amount
+        self.currency = currency
+    }
+    
+    convenience init(jsonDictionary: [String : AnyObject]) throws {
         
         do {
-            
+            self.init()
             let priceJSON = try jsonDictionary.valueForKey(InternalParameterKey.Attributes.rawValue) as [String : AnyObject]
             self.amount = try priceJSON.valueForKey(PriceKey.Amount.rawValue) as String
             self.currency = try priceJSON.valueForKey(PriceKey.Currency.rawValue) as String
@@ -35,5 +46,20 @@ class Price {
         } catch {
             throw InitializationError.MissingMandatoryParameters
         }
+    }
+    
+    //MARK: - NSCoding
+    required convenience init?(coder aDecoder: NSCoder) {
+        
+        let amount = aDecoder.decodeObjectForKey(EncodingKey.PriceAmount.rawValue) as! String
+        let currency = aDecoder.decodeObjectForKey(EncodingKey.PriceCurrency.rawValue) as! String
+        
+        self.init(amount: amount, currency: currency)
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        
+        aCoder.encodeObject(amount, forKey: EncodingKey.PriceAmount.rawValue)
+        aCoder.encodeObject(currency, forKey: EncodingKey.PriceAmount.rawValue)
     }
 }

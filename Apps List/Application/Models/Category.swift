@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class Category {
+class Category: NSObject, NSCoding {
 
     //MARK: - Properties
     var categoryId: String
@@ -17,15 +17,28 @@ class Category {
     var applications: [App]
     
     // MARK: - Enums and Structures
-    private enum CategoryKey : String {
+    private enum CategoryKey: String {
         case Category = "category"
     }
     
+    private enum EncodingKey: String {
+        case CategoryId = "CategoryId"
+        case CategoryName = "CategoryName"
+        case CategoryApps = "CategoryApps"
+    }
+    
     //MARK: - Initialization
-    init (jsonDictionary: [String : AnyObject]) throws {
+    init(categoryId: String = "", name: String = "", applications: [App] = []) {
+        self.categoryId = categoryId
+        self.name = name
+        self.applications = applications
+        super.init()
+    }
+    
+    convenience init (jsonDictionary: [String : AnyObject]) throws {
         
         do {
-        
+            self.init()
             self.categoryId = try jsonDictionary.valueForKey(InternalParameterKey.InternalId.rawValue) as String
             self.name = try jsonDictionary.valueForKey(InternalParameterKey.Label.rawValue) as String
             self.applications = []
@@ -35,7 +48,29 @@ class Category {
         }
     }
     
+    //MARK: - NSCoding
+    required convenience init?(coder aDecoder: NSCoder) {
+        
+        let categoryId = aDecoder.decodeObjectForKey(EncodingKey.CategoryId.rawValue) as! String
+        let name = aDecoder.decodeObjectForKey(EncodingKey.CategoryName.rawValue) as! String
+        let applications = aDecoder.decodeObjectForKey(EncodingKey.CategoryApps.rawValue) as! [App]
+        
+        self.init(categoryId: categoryId, name: name, applications: applications)
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        
+        aCoder.encodeObject(categoryId, forKey: EncodingKey.CategoryId.rawValue)
+        aCoder.encodeObject(name, forKey: EncodingKey.CategoryName.rawValue)
+        aCoder.encodeObject(applications, forKey: EncodingKey.CategoryApps.rawValue)
+    }
+    
     //MARK: - Utils
+    override func isEqual(object: AnyObject?) -> Bool {
+        
+        return self.categoryId == (object as! Category).categoryId
+    }
+    
     class func getAppsList(completion:(categories: [Category]?, error: NSError?) -> Void) {
     
         Alamofire.request(AlamofireRouter.Categories).validate().responseJSON { response in
@@ -60,7 +95,7 @@ class Category {
     
     private class func categoriesAndAppsFromJsonArray(jsonArray:[[String: AnyObject]]) -> [Category] {
     
-        var categories: Set<Category> = Set()
+        var categories = [Category]()
         
         for appDictionary in jsonArray {
         
@@ -79,25 +114,11 @@ class Category {
                     if let app = app {
                         category.applications += [app]
                     }
-                    categories.insert(category)
+                    categories += [category]
                 }
             }
         }
         
-        return Array(categories)
-    }
-}
-
-extension Category: Equatable {}
-
-func ==(lhs: Category, rhs: Category) -> Bool {
-
-    return lhs.categoryId == rhs.categoryId
-}
-
-extension Category: Hashable {
-
-    var hashValue: Int {
-        return self.categoryId.hashValue
+        return categories
     }
 }

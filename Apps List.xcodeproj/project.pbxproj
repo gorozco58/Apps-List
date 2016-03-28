@@ -136,8 +136,8 @@
 		81189FEB1CA5D84A008EA258 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				81189FEC1CA5D85F008EA258 /* App.swift */,
 				81189FED1CA5D85F008EA258 /* Category.swift */,
+				81189FEC1CA5D85F008EA258 /* App.swift */,
 				81189FEE1CA5D85F008EA258 /* Image.swift */,
 				81189FEF1CA5D85F008EA258 /* Price.swift */,
 			);
