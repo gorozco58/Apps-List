@@ -30,7 +30,7 @@ class Price: NSObject, NSCoding {
     }
     
     //MARK: - Initialization
-    init(amount: String = "", currency: String = "") {
+    init(amount: String, currency: String) {
         self.amount = amount
         self.currency = currency
     }
@@ -38,10 +38,11 @@ class Price: NSObject, NSCoding {
     convenience init(jsonDictionary: [String : AnyObject]) throws {
         
         do {
-            self.init()
             let priceJSON = try jsonDictionary.valueForKey(InternalParameterKey.Attributes.rawValue) as [String : AnyObject]
-            self.amount = try priceJSON.valueForKey(PriceKey.Amount.rawValue) as String
-            self.currency = try priceJSON.valueForKey(PriceKey.Currency.rawValue) as String
+            let amount = try priceJSON.valueForKey(PriceKey.Amount.rawValue) as String
+            let currency = try priceJSON.valueForKey(PriceKey.Currency.rawValue) as String
+            
+            self.init(amount: amount, currency: currency)
             
         } catch {
             throw InitializationError.MissingMandatoryParameters

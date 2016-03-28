@@ -59,7 +59,7 @@ class App: NSObject, NSCoding {
     }
     
     //MARK: - Initialization
-    init(appId: String = "", name: String = "", image: Image = Image(), summary: String = "", price: Price = Price(), contentType: String = "", rights: String = "", link: NSURL = NSURL(), artist: String = "", releaseDate: String = "") {
+    init(appId: String, name: String, image: Image, summary: String, price: Price, contentType: String, rights: String, link: NSURL, artist: String, releaseDate: String) {
     
         self.appId = appId
         self.name = name
@@ -76,41 +76,43 @@ class App: NSObject, NSCoding {
     convenience init (jsonDictionary: [String : AnyObject]) throws {
     
         do {
-            self.init()
+            
             let appIdJSON = try jsonDictionary.valueForKey(ParameterKey.AppId.rawValue) as [String : AnyObject]
             let appIdAttributes = try appIdJSON.valueForKey(InternalParameterKey.Attributes.rawValue) as [String : AnyObject]
-            self.appId = try appIdAttributes.valueForKey(InternalParameterKey.InternalId.rawValue) as String
+            let appId = try appIdAttributes.valueForKey(InternalParameterKey.InternalId.rawValue) as String
             
             let nameJSON = try jsonDictionary.valueForKey(ParameterKey.Name.rawValue) as [String : AnyObject]
-            self.name = try nameJSON.valueForKey(InternalParameterKey.Label.rawValue) as String
+            let name = try nameJSON.valueForKey(InternalParameterKey.Label.rawValue) as String
             
             let imageJSON = try jsonDictionary.valueForKey(ParameterKey.Image.rawValue) as [[String : AnyObject]]
-            self.image = try Image(jsonDictionary: imageJSON.last!)
+            let image = try Image(jsonDictionary: imageJSON.last!)
             
             let summaryJSON = try jsonDictionary.valueForKey(ParameterKey.Summary.rawValue) as [String : AnyObject]
-            self.summary = try summaryJSON.valueForKey(InternalParameterKey.Label.rawValue) as String
+            let summary = try summaryJSON.valueForKey(InternalParameterKey.Label.rawValue) as String
             
             let priceJSON = try jsonDictionary.valueForKey(ParameterKey.Price.rawValue) as [String : AnyObject]
-            self.price = try Price(jsonDictionary: priceJSON)
+            let price = try Price(jsonDictionary: priceJSON)
             
             let contentTypeJSON = try jsonDictionary.valueForKey(ParameterKey.ContentType.rawValue) as [String : AnyObject]
             let contentTypeAttributes = try contentTypeJSON.valueForKey(InternalParameterKey.Attributes.rawValue) as [String : AnyObject]
-            self.contentType = try contentTypeAttributes.valueForKey(InternalParameterKey.Label.rawValue) as String
+            let contentType = try contentTypeAttributes.valueForKey(InternalParameterKey.Label.rawValue) as String
             
             let rightsJSON = try jsonDictionary.valueForKey(ParameterKey.Rights.rawValue) as [String : AnyObject]
-            self.rights = try rightsJSON.valueForKey(InternalParameterKey.Label.rawValue) as String
+            let rights = try rightsJSON.valueForKey(InternalParameterKey.Label.rawValue) as String
             
             let linkJSON = try jsonDictionary.valueForKey(ParameterKey.Link.rawValue) as [String : AnyObject]
             let linkAttributes = try linkJSON.valueForKey(InternalParameterKey.Attributes.rawValue) as [String : AnyObject]
             let linkString = try linkAttributes.valueForKey(InternalParameterKey.Href.rawValue) as String
-            self.link = NSURL(string: linkString)!
+            let link = NSURL(string: linkString)!
             
             let artistJSON = try jsonDictionary.valueForKey(ParameterKey.Artist.rawValue) as [String : AnyObject]
-            self.artist = try artistJSON.valueForKey(InternalParameterKey.Label.rawValue) as String
+            let artist = try artistJSON.valueForKey(InternalParameterKey.Label.rawValue) as String
             
             let releaseDateJSON = try jsonDictionary.valueForKey(ParameterKey.ReleaseDate.rawValue) as [String : AnyObject]
             let releaseDateAttributes = try releaseDateJSON.valueForKey(InternalParameterKey.Attributes.rawValue) as [String : AnyObject]
-            self.releaseDate = try releaseDateAttributes.valueForKey(InternalParameterKey.Label.rawValue) as String
+            let releaseDate = try releaseDateAttributes.valueForKey(InternalParameterKey.Label.rawValue) as String
+            
+            self.init(appId: appId, name: name, image: image, summary: summary, price: price, contentType: contentType, rights: rights, link: link, artist: artist, releaseDate: releaseDate)
             
         } catch {
             throw InitializationError.MissingMandatoryParameters

@@ -41,6 +41,12 @@ class AppDetailsViewController: UIViewController {
         super.viewDidLoad()
         setupAppInformation()
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        view.layoutIfNeeded()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

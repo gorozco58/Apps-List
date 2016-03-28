@@ -30,7 +30,7 @@ class Category: NSObject, NSCoding {
     }
     
     //MARK: - Initialization
-    init(categoryId: String = "", name: String = "", applications: [App] = []) {
+    init(categoryId: String, name: String, applications: [App]) {
         self.categoryId = categoryId
         self.name = name
         self.applications = applications
@@ -40,11 +40,9 @@ class Category: NSObject, NSCoding {
     convenience init (jsonDictionary: [String : AnyObject]) throws {
         
         do {
-            self.init()
-            self.categoryId = try jsonDictionary.valueForKey(InternalParameterKey.InternalId.rawValue) as String
-            self.name = try jsonDictionary.valueForKey(InternalParameterKey.Label.rawValue) as String
-            self.applications = []
-            
+            let categoryId = try jsonDictionary.valueForKey(InternalParameterKey.InternalId.rawValue) as String
+            let name = try jsonDictionary.valueForKey(InternalParameterKey.Label.rawValue) as String
+            self.init(categoryId: categoryId, name: name, applications: [])
         } catch {
             throw InitializationError.MissingMandatoryParameters
         }

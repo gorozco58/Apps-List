@@ -21,7 +21,7 @@ class Image: NSObject, NSCoding {
     }
     
     //MARK: - Initialization
-    init(size: CGSize = CGSize.zero, link: NSURL = NSURL()) {
+    init(size: CGSize, link: NSURL) {
         self.size = size
         self.link = link
     }
@@ -29,13 +29,14 @@ class Image: NSObject, NSCoding {
     convenience init(jsonDictionary: [String : AnyObject]) throws {
         
         do {
-            self.init()
             let heightJSON = try jsonDictionary.valueForKey(InternalParameterKey.Attributes.rawValue) as [String : AnyObject]
             let height = try heightJSON.valueForKey(InternalParameterKey.Height.rawValue) as String
-            self.size = CGSize(width: CGFloat(Int(height)!), height: CGFloat(Int(height)!))
+            let size = CGSize(width: CGFloat(Int(height)!), height: CGFloat(Int(height)!))
             
             let linkString = try jsonDictionary.valueForKey(InternalParameterKey.Label.rawValue) as String
-            self.link = NSURL(string: linkString)!
+            let link = NSURL(string: linkString)!
+            
+            self.init(size: size, link: link)
             
         } catch {
             throw InitializationError.MissingMandatoryParameters
