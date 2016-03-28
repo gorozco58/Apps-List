@@ -14,6 +14,7 @@ class AppsViewController: UIViewController {
     
     private var category: Category
     private var apps: [App]
+    private var lastIndexLoaded: NSIndexPath?
     
     //MARK: - Initializers
     init(category: Category) {
@@ -69,9 +70,14 @@ extension AppsViewController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let app = apps[indexPath.row]
+        let animated = indexPath.row > lastIndexLoaded?.row
         
         let cell =  collectionView.dequeueReusableCellWithReuseIdentifier(AppCollectionViewCell.identifier, forIndexPath: indexPath) as! AppCollectionViewCell
-        cell.loadImage(app.image.link)
+        cell.loadImage(app.image.link, animated: animated)
+        
+        if animated {
+            lastIndexLoaded = indexPath
+        }
         
         return cell
     }
