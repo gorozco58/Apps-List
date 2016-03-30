@@ -18,11 +18,7 @@ class Category: NSObject, NSCoding {
     var name: String
     var applications: [App]
     
-    // MARK: - Enums and Structures
-    private enum CategoryKey: String {
-        case Category = "category"
-    }
-    
+    // MARK: - Enums and Structures   
     private enum EncodingKey: String {
         case CategoryId = "CategoryId"
         case CategoryName = "CategoryName"
@@ -70,67 +66,11 @@ class Category: NSObject, NSCoding {
         
         return self.categoryId == (object as! Category).categoryId
     }
-    
-    class func getAppsList(completion:(categories: [Category]?, error: NSError?) -> Void) {
-    
-        Alamofire.request(AlamofireRouter.Categories).validate().responseJSON { response in
-            
-            switch response.result {
-            
-            case .Success(let value):
-                
-                if let feed = value["feed"] as? [String : AnyObject] {
-                    if let entries = feed["entry"] as? [[String : AnyObject]] {
-                        
-                        let categories = categoriesAndAppsFromJsonArray(entries)
-                        completion(categories: categories, error: nil)
-                    }
-                }
-            case .Failure(let error):
-                
-                //load categories from disk if exist
-                let categories = Category.loadCategoriesFromDisk()
-                completion(categories: categories, error: error)
-            }
-        }
-    }
-    
-    private class func categoriesAndAppsFromJsonArray(jsonArray:[[String: AnyObject]]) -> [Category] {
-    
-        var categories = [Category]()
-        
-        for appDictionary in jsonArray {
-        
-            if let categoryDictionary = appDictionary[CategoryKey.Category.rawValue] as? [String : AnyObject],
-            let categoryAttributes = categoryDictionary[InternalParameterKey.Attributes.rawValue] as? [String : AnyObject],
-            var category = try? Category(jsonDictionary: categoryAttributes) {
-                
-                let app = try? App(jsonDictionary: appDictionary)
-                
-                if categories.contains(category) {
-                    if let app = app {
-                        category = categories[categories.indexOf(category)!]
-                        category.applications += [app]
-                    }
-                } else {
-                    if let app = app {
-                        category.applications += [app]
-                    }
-                    categories += [category]
-                }
-            }
-        }
-        
-        //save categories to disk
-        saveCategoriesToDisk(categories)
-        
-        return categories
-    }
 }
 
 extension Category {
 
-    private class func saveCategoriesToDisk(categories: [Category]) -> Bool {
+    class func saveCategoriesToDisk(categories: [Category]) -> Bool {
         
         let urlPath = Category.categoriesPath()
         let dataToSave = NSKeyedArchiver.archivedDataWithRootObject(categories)
@@ -139,7 +79,7 @@ extension Category {
         return success
     }
     
-    private class func loadCategoriesFromDisk() -> [Category]? {
+    class func loadCategoriesFromDisk() -> [Category]? {
         
         let urlPath = Category.categoriesPath()
         var categories: [Category]?

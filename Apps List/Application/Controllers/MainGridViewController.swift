@@ -24,15 +24,17 @@ class MainGridViewController: UIViewController, CategoryContent {
         registerCells()
         SVProgressHUD.show()
         
-        Category.getAppsList { [unowned self] (categories, error) in
+        CategoryAPI().getCategoriesList { (result) in
             
-            if let categories = categories {
+            switch result {
+                
+            case .Success(let categories):
                 
                 SVProgressHUD.dismiss()
                 self.categories = categories
                 self.categoriesCollectionView.reloadData()
                 
-            } else if let error = error {
+            case .Failure(let error):
                 
                 SVProgressHUD.showErrorWithStatus(error.localizedDescription)
             }
