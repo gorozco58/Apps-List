@@ -24,7 +24,7 @@ class MainGridViewController: UIViewController, CategoryContent {
         registerCells()
         SVProgressHUD.show()
         
-        CategoryAPI().getCategoriesList { (result) in
+        CategoryAPI().getCategoriesList { [unowned self] (result) in
             
             switch result {
                 

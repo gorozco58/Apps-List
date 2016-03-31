@@ -6,13 +6,43 @@
 //  Copyright © 2016 Giovanny Orozco. All rights reserved.
 //
 
-struct CategoryAPI: CategoryService {
+import Alamofire
+
+struct CategoryAPI {
+    
+    func getCategoriesList(completion:(result:(Result<[Category], NSError>)) -> Void) {
+        
+        Alamofire.request(AlamofireRouter.Categories).validate().responseJSON { response in
+            
+            switch response.result {
+                
+            case .Success(let value):
+                
+                if let feed = value["feed"] as? [String : AnyObject] {
+                    if let entries = feed["entry"] as? [[String : AnyObject]] {
+                        
+                        let categories = CategoryFactory().makeCategories(entries)
+                        let result: Result<[Category], NSError> = Result.Success(categories)
+                        
+                        completion(result: result)
+                    }
+                }
+            case .Failure(let error):
+                
+                let result: Result<[Category], NSError> = Result.Failure(error)
+                completion(result: result)
+            }
+        }
+    }
+}
+
+struct CategoryFactory {
     
     private enum CategoryKey: String {
         case Category = "category"
     }
     
-    func categoryParser(jsonArray:[[String: AnyObject]]) -> [Category] {
+    func makeCategories(jsonArray:[[String: AnyObject]]) -> [Category] {
         
         var categories = [Category]()
         

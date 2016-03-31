@@ -34,7 +34,6 @@
 		88D4E04A1CA32F2E00D2F8E5 /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4E0491CA32F2E00D2F8E5 /* MainListViewController.swift */; };
 		88D4E04D1CA32FC900D2F8E5 /* MainiPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88D4E04B1CA32FC900D2F8E5 /* MainiPad.storyboard */; };
 		88EED2271CA9B83B00F03586 /* ViewControllerAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EED2261CA9B83B00F03586 /* ViewControllerAnimator.swift */; };
-		88EED22D1CAC73D900F03586 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EED22C1CAC73D900F03586 /* CategoryService.swift */; };
 		88EED22F1CAC766D00F03586 /* CategoryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EED22E1CAC766D00F03586 /* CategoryAPI.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,7 +89,6 @@
 		88D4E0491CA32F2E00D2F8E5 /* MainListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainListViewController.swift; sourceTree = "<group>"; };
 		88D4E04C1CA32FC900D2F8E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainiPad.storyboard; sourceTree = "<group>"; };
 		88EED2261CA9B83B00F03586 /* ViewControllerAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerAnimator.swift; path = Utils/ViewControllerAnimator.swift; sourceTree = "<group>"; };
-		88EED22C1CAC73D900F03586 /* CategoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryService.swift; path = Networking/CategoryService.swift; sourceTree = "<group>"; };
 		88EED22E1CAC766D00F03586 /* CategoryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryAPI.swift; path = Networking/CategoryAPI.swift; sourceTree = "<group>"; };
 		9EA6862B67D9B5061C68FD47 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,7 +141,6 @@
 		81189FEB1CA5D84A008EA258 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				88EED22B1CAC599100F03586 /* Utilities */,
 				81189FED1CA5D85F008EA258 /* Category.swift */,
 				81189FEC1CA5D85F008EA258 /* App.swift */,
 				81189FEE1CA5D85F008EA258 /* Image.swift */,
@@ -270,17 +267,9 @@
 		88EED2281CAC573500F03586 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				88EED22C1CAC73D900F03586 /* CategoryService.swift */,
 				88EED22E1CAC766D00F03586 /* CategoryAPI.swift */,
 			);
 			name = Networking;
-			sourceTree = "<group>";
-		};
-		88EED22B1CAC599100F03586 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Utilities;
 			sourceTree = "<group>";
 		};
 		C0729219BAFD1F111DBE32E4 /* Pods */ = {
@@ -494,7 +483,6 @@
 				81189FF31CA5D85F008EA258 /* Price.swift in Sources */,
 				81189FEA1CA5D83E008EA258 /* DictionaryTypeCast.swift in Sources */,
 				81189FE11CA5D2F1008EA258 /* MainGridViewController.swift in Sources */,
-				88EED22D1CAC73D900F03586 /* CategoryService.swift in Sources */,
 				81189FF11CA5D85F008EA258 /* Category.swift in Sources */,
 				8118A0121CA6CF94008EA258 /* AppCollectionViewCell.swift in Sources */,
 			);
