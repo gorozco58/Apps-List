@@ -36,7 +36,7 @@ class MainGridViewController: UIViewController, CategoryContent {
                 
             case .Failure(let error):
                 
-                SVProgressHUD.showErrorWithStatus(error.localizedDescription)
+                SVProgressHUD.showErrorWithStatus(error.message)
             }
         }
     }
