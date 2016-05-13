@@ -1,0 +1,6 @@
+framework module Pods_Apps_List {
+  umbrella header "Pods-Apps List-umbrella.h"
+
+  export *
+  module * { export * }
+}

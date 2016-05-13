@@ -1,0 +1,3 @@
+language: objective-c
+xcode_workspace: Apps List.xcworkspace
+xcode_scheme: Apps List
